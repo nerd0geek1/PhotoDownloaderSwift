@@ -12,6 +12,7 @@
 		73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C221E33421D0065D5AC /* AppDelegate.swift */; };
 		73ED2C361E33491A0065D5AC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ED2C341E33491A0065D5AC /* Alamofire.framework */; };
 		73ED2C371E33491A0065D5AC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ED2C351E33491A0065D5AC /* Kingfisher.framework */; };
+		73ED2C291E3344710065D5AC /* ImageAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C281E3344710065D5AC /* ImageAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,9 @@
 		73ED2C181E333B7C0065D5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73ED2C1A1E333B7C0065D5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73ED2C221E33421D0065D5AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73ED2C2E1E3348630065D5AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		73ED2C2F1E3348630065D5AC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		73ED2C341E33491A0065D5AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		73ED2C351E33491A0065D5AC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/Mac/Kingfisher.framework; sourceTree = "<group>"; };
+		73ED2C281E3344710065D5AC /* ImageAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				73ED2C211E3342090065D5AC /* application */,
+				73ED2C241E3344280065D5AC /* models */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -92,6 +93,22 @@
 				73ED2C2F1E3348630065D5AC /* Kingfisher.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73ED2C241E3344280065D5AC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				73ED2C251E3344380065D5AC /* entity */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		73ED2C251E3344380065D5AC /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				73ED2C281E3344710065D5AC /* ImageAttributes.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */,
+				73ED2C291E3344710065D5AC /* ImageAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
