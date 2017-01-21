@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73ED2C141E333B7C0065D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C131E333B7C0065D5AC /* AppDelegate.swift */; };
 		73ED2C161E333B7C0065D5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C151E333B7C0065D5AC /* Assets.xcassets */; };
 		73ED2C191E333B7C0065D5AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C171E333B7C0065D5AC /* MainMenu.xib */; };
+		73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C221E33421D0065D5AC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73ED2C101E333B7C0065D5AC /* PhotoDownloaderSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoDownloaderSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		73ED2C131E333B7C0065D5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73ED2C151E333B7C0065D5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73ED2C181E333B7C0065D5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73ED2C1A1E333B7C0065D5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73ED2C221E33421D0065D5AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +50,28 @@
 		73ED2C121E333B7C0065D5AC /* PhotoDownloaderSwift */ = {
 			isa = PBXGroup;
 			children = (
-				73ED2C131E333B7C0065D5AC /* AppDelegate.swift */,
+				73ED2C201E3342020065D5AC /* classes */,
 				73ED2C151E333B7C0065D5AC /* Assets.xcassets */,
 				73ED2C171E333B7C0065D5AC /* MainMenu.xib */,
 				73ED2C1A1E333B7C0065D5AC /* Info.plist */,
 			);
 			path = PhotoDownloaderSwift;
+			sourceTree = "<group>";
+		};
+		73ED2C201E3342020065D5AC /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				73ED2C211E3342090065D5AC /* application */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		73ED2C211E3342090065D5AC /* application */ = {
+			isa = PBXGroup;
+			children = (
+				73ED2C221E33421D0065D5AC /* AppDelegate.swift */,
+			);
+			path = application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +107,7 @@
 					73ED2C0F1E333B7C0065D5AC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5GKRYZ5VBH;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73ED2C141E333B7C0065D5AC /* AppDelegate.swift in Sources */,
+				73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,12 +259,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
 				INFOPLIST_FILE = PhotoDownloaderSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.PhotoDownloaderSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -256,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
 				INFOPLIST_FILE = PhotoDownloaderSwift/Info.plist;
@@ -285,6 +305,7 @@
 				73ED2C1F1E333B7C0065D5AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
