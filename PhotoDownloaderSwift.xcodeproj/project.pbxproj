@@ -10,6 +10,8 @@
 		73ED2C161E333B7C0065D5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C151E333B7C0065D5AC /* Assets.xcassets */; };
 		73ED2C191E333B7C0065D5AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C171E333B7C0065D5AC /* MainMenu.xib */; };
 		73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C221E33421D0065D5AC /* AppDelegate.swift */; };
+		73ED2C361E33491A0065D5AC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ED2C341E33491A0065D5AC /* Alamofire.framework */; };
+		73ED2C371E33491A0065D5AC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ED2C351E33491A0065D5AC /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,10 @@
 		73ED2C181E333B7C0065D5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73ED2C1A1E333B7C0065D5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73ED2C221E33421D0065D5AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73ED2C2E1E3348630065D5AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		73ED2C2F1E3348630065D5AC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		73ED2C341E33491A0065D5AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		73ED2C351E33491A0065D5AC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/Mac/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73ED2C361E33491A0065D5AC /* Alamofire.framework in Frameworks */,
+				73ED2C371E33491A0065D5AC /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +44,7 @@
 			children = (
 				73ED2C121E333B7C0065D5AC /* PhotoDownloaderSwift */,
 				73ED2C111E333B7C0065D5AC /* Products */,
+				73ED2C2D1E3348630065D5AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,17 @@
 			path = application;
 			sourceTree = "<group>";
 		};
+		73ED2C2D1E3348630065D5AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73ED2C341E33491A0065D5AC /* Alamofire.framework */,
+				73ED2C351E33491A0065D5AC /* Kingfisher.framework */,
+				73ED2C2E1E3348630065D5AC /* Alamofire.framework */,
+				73ED2C2F1E3348630065D5AC /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +105,7 @@
 				73ED2C0D1E333B7C0065D5AC /* Frameworks */,
 				73ED2C0E1E333B7C0065D5AC /* Resources */,
 				73ED2C2B1E3345F90065D5AC /* SwiftLint */,
+				73ED2C331E3348850065D5AC /* Copy Carthage Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +178,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = ./swiftlint;
+		};
+		73ED2C331E3348850065D5AC /* Copy Carthage Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Kingfisher.framework",
+			);
+			name = "Copy Carthage Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -280,6 +317,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PhotoDownloaderSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.PhotoDownloaderSwift;
@@ -296,6 +337,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PhotoDownloaderSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerd0geek1.PhotoDownloaderSwift;
