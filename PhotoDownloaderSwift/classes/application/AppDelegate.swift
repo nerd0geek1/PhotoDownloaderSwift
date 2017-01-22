@@ -13,6 +13,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    let apiClient: PhotozouApiClientImpl = PhotozouApiClientImpl()
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        apiClient.fetchImages(with: "くら寿司") { (imageAttributes, error) in
+            if let error = error {
+                let alert: NSAlert = NSAlert(error: error)
+                alert.runModal()
+                return
+            }
+
+            for imageAttribute in imageAttributes {
+                print(imageAttribute.url)
+            }
+        }
     }
 }

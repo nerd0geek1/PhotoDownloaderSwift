@@ -1,2 +1,5 @@
+disabled_rules:
+  - colon
 excluded:
   - Carthage/
+line_length: 150
