@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		73D6EC091E3360FB0057CB31 /* PhotozouApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6EC081E3360FB0057CB31 /* PhotozouApiClientImpl.swift */; };
+		73D6EC111E3446450057CB31 /* ImageFileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6EC101E3446450057CB31 /* ImageFileDownloader.swift */; };
+		73D6EC141E3449BE0057CB31 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6EC131E3449BE0057CB31 /* String+Addition.swift */; };
 		73ED2C161E333B7C0065D5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C151E333B7C0065D5AC /* Assets.xcassets */; };
 		73ED2C191E333B7C0065D5AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ED2C171E333B7C0065D5AC /* MainMenu.xib */; };
 		73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED2C221E33421D0065D5AC /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		73D6EC081E3360FB0057CB31 /* PhotozouApiClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotozouApiClientImpl.swift; sourceTree = "<group>"; };
+		73D6EC101E3446450057CB31 /* ImageFileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFileDownloader.swift; sourceTree = "<group>"; };
+		73D6EC131E3449BE0057CB31 /* String+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		73ED2C101E333B7C0065D5AC /* PhotoDownloaderSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoDownloaderSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ED2C151E333B7C0065D5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73ED2C181E333B7C0065D5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -47,6 +51,30 @@
 				73D6EC081E3360FB0057CB31 /* PhotozouApiClientImpl.swift */,
 			);
 			path = networking;
+			sourceTree = "<group>";
+		};
+		73D6EC0C1E3445610057CB31 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				73D6EC0D1E3445610057CB31 /* downloader */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		73D6EC0D1E3445610057CB31 /* downloader */ = {
+			isa = PBXGroup;
+			children = (
+				73D6EC101E3446450057CB31 /* ImageFileDownloader.swift */,
+			);
+			path = downloader;
+			sourceTree = "<group>";
+		};
+		73D6EC121E3449B30057CB31 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73D6EC131E3449BE0057CB31 /* String+Addition.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		73ED2C071E333B7C0065D5AC = {
@@ -81,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				73ED2C211E3342090065D5AC /* application */,
+				73D6EC121E3449B30057CB31 /* extensions */,
 				73ED2C241E3344280065D5AC /* models */,
+				73D6EC0C1E3445610057CB31 /* features */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -228,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D6EC111E3446450057CB31 /* ImageFileDownloader.swift in Sources */,
+				73D6EC141E3449BE0057CB31 /* String+Addition.swift in Sources */,
 				73D6EC091E3360FB0057CB31 /* PhotozouApiClientImpl.swift in Sources */,
 				73ED2C231E33421D0065D5AC /* AppDelegate.swift in Sources */,
 				73ED2C291E3344710065D5AC /* ImageAttributes.swift in Sources */,
